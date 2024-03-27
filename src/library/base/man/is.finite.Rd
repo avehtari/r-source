@@ -19,9 +19,9 @@
 
   \code{Inf} and \code{-Inf} are positive and negative infinity
   whereas \code{NaN} means \sQuote{Not a Number}.  \code{Inf} and
-  \code{NaN} are class of numeric and type of double, and can be
-  used in real and imaginary parts of complex values, but not as
-  values in integer vectors. \code{Inf} and \code{NaN} (as well as
+  \code{NaN} are class of \code{numeric} and type of \code{double},
+  and can be used in real and imaginary parts of complex values, but not
+  as values in integer vectors. \code{Inf} and \code{NaN} (as well as
   \code{\link{NA}}) are
   \link{reserved} words in the \R language.
 }
@@ -86,11 +86,11 @@ NaN
   \code{dimnames} and \code{names} attributes are preserved.
 }
 \seealso{
-  \code{\link{NA}}, \sQuote{\emph{Not Available}} / \sQuote{Missing value} 
-  which is a a logical constant of length 1 which contains a missing
-  value indicator. \code{\link{NA}} can be coerced to numeric as
-  \code{\link{NA_integer_}} and \code{\link{NA_real_}}.
-
+  \code{\link{NA}}, \sQuote{\emph{Not Available}}, which is usually used
+  to denote a missing value. The default mode of \code{NA} is
+  \code{logical}; unlike \code{NaN}, which is always of mode
+  \code{double}.
+  
   \code{\link{Arithmetic}}, \code{\link{double}}, \code{\link{is.na}}.
 }
 \references{

@@ -26,7 +26,7 @@
   are \link{reserved} words in the \R language.
 
   The generic function \code{is.na} indicates which elements are missing
-  (\code{NA}) or  (NA) or \sQuote{Not a Number} (\code{link{NaN}}). 
+  (\code{NA}) or \sQuote{Not a Number} (\code{link{NaN}}). 
 
   The generic function \code{is.na<-} sets elements to \code{NA}.
 
@@ -123,8 +123,8 @@ is.na(x) <- value
   on how methods can be tuned to deal with missing values.
 }
 \examples{
-is.na(c(1, NA, NA_real__, NaN))        #> FALSE  TRUE  TRUE  TRUE
-is.na(paste(c(1, NA, NA_real__, NaN))) #> FALSE FALSE FALSE FALSE
+is.na(c(1, NA, NA_real_, NaN))        #> FALSE  TRUE  TRUE  TRUE
+is.na(paste(c(1, NA, NA_real_, NaN))) #> FALSE FALSE FALSE FALSE
 
 # When NaN should not be considered as missing value
 is.na(c(1, NA, NA_real_, NaN)) & !is.nan(c(1, NA, NA_real_, NaN))

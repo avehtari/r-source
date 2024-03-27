@@ -18,9 +18,10 @@
   and not missing) or infinite.
 
   \code{Inf} and \code{-Inf} are positive and negative infinity
-  whereas \code{NaN} means \sQuote{Not a Number}.  (These apply to numeric
-  values and real and imaginary parts of complex values but not to
-  values of integer vectors.)  \code{Inf} and \code{NaN} (as well as
+  whereas \code{NaN} means \sQuote{Not a Number}.  \code{Inf} and
+  \code{NaN} are class of \code{numeric} and type of \code{double},
+  and can be used in real and imaginary parts of complex values, but not
+  as values in integer vectors. \code{Inf} and \code{NaN} (as well as
   \code{\link{NA}}) are
   \link{reserved} words in the \R language.
 }
@@ -85,11 +86,12 @@ NaN
   \code{dimnames} and \code{names} attributes are preserved.
 }
 \seealso{
-  \code{\link{NA}}, \sQuote{\emph{Not Available}} which is not a number
-  as well, however usually used for missing values and applies to many
-  modes, not just numeric and complex.
-
-  \code{\link{Arithmetic}}, \code{\link{double}}.
+  \code{\link{NA}}, \sQuote{\emph{Not Available}}, which is usually used
+  to denote a missing value. The default mode of \code{NA} is
+  \code{logical}; unlike \code{NaN}, which is always of mode
+  \code{double}.
+  
+  \code{\link{Arithmetic}}, \code{\link{double}}, \code{\link{is.na}}.
 }
 \references{
   The IEC 60559 standard, also known as the
@@ -117,7 +119,7 @@ NaN
 }
 \examples{
 pi / 0 ## = Inf a non-zero number divided by zero creates infinity
-0 / 0  ## =  NaN
+0 / 0  ## =  NaN as defined in IEC 60559 standard
 
 1/0 + 1/0 # Inf
 1/0 - 1/0 # NaN

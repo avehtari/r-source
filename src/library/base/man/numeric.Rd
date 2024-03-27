@@ -13,7 +13,10 @@
 \description{
   Creates or coerces objects of type \code{"numeric"}.
   \code{is.numeric} is a more general test of an object being
-  interpretable as numbers.
+  interpretable as numbers. These include special numeric objects
+  \code{\link{Inf}}, \code{\link{NaN}}, \code{\link{NA_integer_}},
+  and \code{\link{NA_real_}}.
+
 }
 \usage{
 numeric(length = 0)
@@ -88,7 +91,8 @@ is.numeric(x)
   coerces to the class.
 }
 \seealso{
-  \code{\link{double}}, \code{\link{integer}}, \code{\link{storage.mode}}.
+  \code{\link{double}}, \code{\link{integer}}, \code{\link{storage.mode}},
+  \code{\link{Inf}}, \code{\link{NaN}}.
 }
 \references{
   Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988)
